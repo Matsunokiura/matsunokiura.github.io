@@ -1,4 +1,4 @@
 # matsunokiura.github.io
-ここでは、私Matsunokiがテストでサイトを動かしたりします。
+Matsunokiのホームページです。
 下のリンクからホームにアクセスしてください
 https://matsunokiura.github.io/index.html

@@ -1,85 +1,258 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Matsunokiura/matsunokiura.github.io/refs/heads/main/Matsunoki.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Matsunoki</title>
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/Matsunokiura/matsunokiura.github.io/refs/heads/main/Matsunoki.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+    }
 
-    <title>Matsunoki</title>
-    <style>
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      z-index: 1000;
+    }
 
-        nav {
-    width: 100%;
-    height: 70px;
-    background-color: black;
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .menu a:hover {
+      color: #1db954;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #000;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .mobile-menu a {
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .mobile-menu a:hover {
+      color: #1db954;
+    }
+
+    .container {
+      padding-top: 100px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .hero {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 28px;
+      color: #fff;
+      font-weight: bold;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+    }
+
+    .hero-text.show {
+      opacity: 1;
+    }
+
+    .box {
+      padding: 15px;
+      margin: 30px auto;
+      border: 2px solid #1db954;
+      border-radius: 10px;
+      background-color: #222;
+      display: inline-block;
+      text-align: left;
+    }
+
+    h1, h2 {
+      color: #1db954;
+    }
+
+    .footer {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    .fall {
+        text-align: center;
 }
 
-nav ul {
-    display: flex;
-}
+    @media (max-width: 767px) {
+      .menu {
+        display: none;
+      }
 
-nav li {
-    list-style: none;
-}
+      .hamburger {
+        display: flex;
+      }
 
-nav a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    margin-right: 35px;
-}
+      .mobile-menu.show {
+        display: flex;
+      }
 
-nav {
-    padding-top: 5px;
-    box-sizing: border-box;
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.for-pc { display:block; }
-.for-sp { display:none; }
-
-@media only screen and (max-width:767px){
-    .for-pc { dispay:none; }
-    .for-sp { display:block; }
-    </style>
-
+      .hero-text {
+        font-size: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-            <header>
-    <nav>
-<ul>
-            <li><a href="https://matsunoki.f5.si">Home</a></li>
-            <li><a href="https://matsunoki.f5.si/podcasts.html">Podcast</a></li>
-            <li><a href="https://balelectric.f5.si">Balelectric</a></li>
-        </ul>
-    </nav>
-    </header>
-    <center>
-    <br><br><br>
-        <image src="Matsunoki Official Website.png" height="400"><p>
-        <h1>Welcome!!</h1><p>
-        Matsunokiのホームページへようこそ！<p><br><br>
-            <div style="padding: 10px; margin-bottom: 10px; border: 5px double #333333; border-radius: 10px;"><b>お知らせ</b><p>
-                2025/6/18 お笑いユニット「チーム脱皮蟹」を結成しました。
-                2025/2/15 U Software脱退のお知らせ<br>
-                2025/2/14 Matsunoki - Happy Drive Outnow!!<br>
-            </p></div>
-                <h2>About Matsunoki</h2><p>
-                僕は曲を作ったり、webサイトを作ったり、毎週木曜日にラジオを更新したりしています。<br><br>
-                    <image src="https://raw.githubusercontent.com/Matsunokiura/matsunokiura.github.io/refs/heads/main/Matsunoki.png" height="300"><p></p>
-                        <h2>Podcast</h2><p>
-                友達のそうすけくんと毎週木曜日にラジオを更新しています。<br>
-                Podcastに関しては、<a href="podcasts.html">こちらまで</a><p><image src="https://raw.githubusercontent.com/Matsunokiura/matsunokiura.github.io/refs/heads/main/Ma%20Radio.png" height="300"><br><br>
-                    <h2>Music</h2><p>
-                        僕のメインの活動は作曲です。<br>
-                        一部音楽を<a href="https://www.youtube.com/@matsunokimusic">こちらで</a>配信しています。
-                    <p><hr>©︎ 2025 Matsunoki / Balelectric
-        </p></p>
-    </p></p></p></p>
-    </center>
+
+  <!-- ナビゲーションバー -->
+  <nav>
+    <a class="logo" href="https://matsunoki.f5.si">Matsunoki</a>
+    <div class="menu">
+      <a href="https://matsunoki.f5.si">HOME</a>
+    <a href="https://youtube.com/@matsunokimusic">MUSIC</a>
+    <a href="https://matsunoki.f5.si/podcasts.html">PODCAST</a>
+    <a href="https://linktr.ee/matsunokimusic">LINKS</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="https://matsunoki.f5.si">HOME</a>
+    <a href="https://youtube.com/@matsunokimusic">MUSIC</a>
+    <a href="https://matsunoki.f5.si/podcasts.html">PODCAST</a>
+    <a href="https://linktr.ee/matsunokimusic">LINKS</a>
+  </div>
+
+  <div class="container">
+    <!-- ヒーロー画像とテキスト -->
+    <div class="hero">
+      <img src="Matsunoki Official Website.png" alt="Matsunoki Hero Image">
+      <div class="hero-text" id="hero-text">ようこそ！</div>
+    </div>
+
+    <h1>Matsunoki</h1>
+    <p>僕のホームページへようこそ！</p>
+
+    <div class="box">
+      <div class="fall"><strong>お知らせ</strong></div><br>
+      2025/6/18 お笑いユニット「チーム脱皮蟹」を結成しました。<br>
+      2025/2/15 U Software脱退のお知らせ<br>
+      2025/2/14 Matsunoki - Happy Drive Outnow!!
+    </div>
+
+    <h2>About Matsunoki</h2>
+    <p>僕は曲を作ったり、webサイトを作ったり、毎週木曜日にラジオを更新したりしています。</p>
+    <img src="https://raw.githubusercontent.com/Matsunokiura/matsunokiura.github.io/refs/heads/main/Matsunoki.png" height="200" alt="Matsunoki Logo">
+
+    <h2 id="podcast">Podcast</h2>
+    <p>友達のそうすけくんと毎週木曜日にラジオを更新しています。<br>
+    Podcastに関しては、<a href="podcasts.html" style="color:#1db954;">こちらまで</a></p>
+    <img src="https://raw.githubusercontent.com/Matsunokiura/matsunokiura.github.io/refs/heads/main/Ma%20Radio.png" height="200" alt="Podcast Image">
+
+    <h2 id="music">Music</h2>
+    <p>僕のメインの活動は作曲です。<br>
+    一部音楽を<a href="https://www.youtube.com/@matsunokimusic" style="color:#1db954;">こちらで</a>配信しています。</p>
+
+    <div class="box">
+      <div class="fall"><strong>相互リンク</strong></div><br>
+      <a href="https://forms.gle/4iVH2wttxZwiDdFU9">相互リンク募集中です</a>
+    </div>
+
+    <div class="footer">©︎ 2025 Matsunoki / Balelectric</div>
+  </div>
+
+  <!-- JavaScript（ハンバーガーとフェード文字） -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("show");
+    }
+
+    const messages = ["ようこそ！", "Matsunokiと申します", "音楽と芸人をしています！"];
+    let index = 0;
+    const textEl = document.getElementById("hero-text");
+
+    function switchText() {
+      textEl.classList.remove("show");
+      setTimeout(() => {
+        index = (index + 1) % messages.length;
+        textEl.textContent = messages[index];
+        textEl.classList.add("show");
+      }, 1000);
+    }
+
+    textEl.classList.add("show");
+    setInterval(switchText, 6000);
+  </script>
+
 </body>
 </html>
